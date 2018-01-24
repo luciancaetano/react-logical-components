@@ -21,12 +21,17 @@ or
     npm install --save react-logical-components
 
 ## ShowIf 😜
-This component will only render children if the value attribute is true, see an example usage
+This component will only render children elements if the value attribute is true, see an example usage
 
     <ShowIf value={this.state.hello == 'hello'}>
     	<input type="text" value="Hello World"/>
     </ShowIf>
+## HideIf 😲
+This component will not render children elements if the value attribute is true, see an example usage
 
+    <HideIf value={this.state.hello == 'hello'}>
+    	<input type="text" value="Hello World"/>
+    </HideIf>
 ## Switch, SwitchCase , SwitchDefault 🤗
 This component already implements the much-used switch, see an example usage
 
