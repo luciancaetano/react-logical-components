@@ -9,7 +9,7 @@ The way we currently use the if condition for an element
 
 See how React <Logical.Components/> simplifies it
 
-    <ShowIf value = {true}>
+    <ShowIf value={true}>
          <Element />
     </ ShowIf>
     
