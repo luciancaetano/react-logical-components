@@ -47,12 +47,14 @@ This component already implements the much-used switch, see an example usage
         </SwitchDefault>
     </Switch>
 
-## Foreach 🤩
-This component makes an interaction on a vector or an object using Object.keys, see an example usage
+## Foreach, ForeachEmpty 🤩
+This component makes an interaction on a vector or an object using Object.keys, see an example usage.
+Use <ForeachEmpty/> to render a default content when collection is empty.
 
-    <Foreach collection={[1, 2, 3]}>
-        { (item, index) => <li key={index}>{item}</li>}
-    </Foreach>
+<Foreach collection={[1, 2, 3]}>
+    { (item, index) => <li key={index}>{item}</li>}
+    <ForeachEmpty> Nothing found </ForeachEmpty>
+</Foreach>
 
 ## More coming 😎
 I started this project on January 24, 2018, so I am working to implement and test these components, I am also working on new concepts of components, ah also I accept ideas.
