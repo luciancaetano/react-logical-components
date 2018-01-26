@@ -11,7 +11,7 @@ See how React <Logical.Components/> simplifies it
 ```jsx
     <ShowIf value={true}>
          <Element />
-    </ ShowIf>
+    </ShowIf>
 ```
 # How to use 🧐
 
