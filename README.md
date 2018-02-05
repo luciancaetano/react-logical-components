@@ -51,7 +51,7 @@ This component already implements the much-used switch, see an example usage
 ```
 ## Foreach, ForeachEmpty 🤩
 This component makes an interaction on a vector or an object using Object.keys, see an example usage.
-Use <ForeachEmpty/> to render a default content when collection is empty.
+Use `<ForeachEmpty/>` to render a default content when collection is empty.
 ```jsx
     <Foreach collection={[1, 2, 3]}>
         { (item, index) => <li key={index}>{item}</li>}
