@@ -1,8 +1,10 @@
 {
   "name": "react-logical-components",
+  "version": "1.0.0",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "babel src -d lib",
-    "storybook": "start-storybook -p 6006",
+    "build": "babel src -d lib --presets=env,flow --plugins=transform-class-properties,transform-object-rest-spread",
+    "storybook": "start-storybook -p 3003",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -14,6 +16,7 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
     "eslint": "^4.17.0",
@@ -23,6 +26,8 @@
     "eslint-plugin-react": "^7.6.1"
   },
   "dependencies": {
+    "@storybook/addon-notes": "^3.3.12",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   }

@@ -28,7 +28,7 @@ stories.add('Iterate Object', () => (
 ));
 stories.add('Iterate Empty Array', () => (
     <ul>
-        <Foreach itens={[]}>
+        <Foreach itens={array('Array List', [])}>
             {(item: any, index: any): React.ReactNode => {
                 return <li key={index}>{item}</li>;
             }}
@@ -37,7 +37,7 @@ stories.add('Iterate Empty Array', () => (
 ));
 stories.add('Iterate Empty Object', () => (
     <ul>
-        <Foreach itens={{}}>
+        <Foreach itens={object('Object List', [])}>
             {(item: any, index: any): React.ReactNode => {
                 return <li key={index}>{item}</li>;
             }}
@@ -66,7 +66,7 @@ stories.add('Iterate Object With ForeachEmpty', () => (
 ));
 stories.add('Iterate Empty Array With ForeachEmpty', () => (
     <ul>
-        <Foreach itens={[]}>
+        <Foreach itens={array('Array List', [])}>
             {(item: any, index: any): React.ReactNode => {
                 return <li key={index}>{item}</li>;
             }}
@@ -76,7 +76,7 @@ stories.add('Iterate Empty Array With ForeachEmpty', () => (
 ));
 stories.add('Iterate Empty Object With ForeachEmpty', () => (
     <ul>
-        <Foreach itens={{}}>
+        <Foreach itens={object('Object List', ObjectTodoList)}>
             {(item: any, index: any): React.ReactNode => {
                 return <li key={index}>{item}</li>;
             }}
