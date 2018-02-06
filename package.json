@@ -1,6 +1,6 @@
 {
   "name": "react-logical-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib --presets=env,flow --plugins=transform-class-properties,transform-object-rest-spread",
