@@ -1,6 +1,4 @@
 # React <Logical.Components/>
-**In development 😁**
-
 React <Logical.Components/> is a library of components designed to improve the visual quality and ease of applying logic operations, iterations etc. in React JSx.
 
 The way we currently use the if condition for an element
@@ -13,6 +11,9 @@ See how React <Logical.Components/> simplifies it
          <Element />
     </ShowIf>
 ```
+
+[See HistoryBook](https://luciancaetano.github.io/react-logical-components)
+
 # How to use 🧐
 
     yarn add react-logical-components
