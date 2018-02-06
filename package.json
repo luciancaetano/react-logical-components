@@ -1,12 +1,12 @@
 {
   "name": "react-logical-components",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib --presets=env,flow --plugins=transform-class-properties,transform-object-rest-spread",
     "storybook": "start-storybook -p 3003",
     "build-storybook": "build-storybook",
-    "publish": "yarn build && npm publish"
+    "publish-pkg": "yarn build && npm publish"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.12",
