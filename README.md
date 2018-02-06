@@ -12,7 +12,7 @@ See how React <Logical.Components/> simplifies it
     </ShowIf>
 ```
 
-[See HistoryBook](https://luciancaetano.github.io/react-logical-components)
+[See HistoryBook Examples](https://luciancaetano.github.io/react-logical-components/index.html)
 
 # How to use 🧐
 
