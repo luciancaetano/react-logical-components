@@ -1,7 +1,7 @@
 {
   "extends": [
-    "react",
-    "plugin:flowtype/recommended"
+    "plugin:flowtype/recommended",
+    "react"    
   ],
   "parser": "babel-eslint",
   "plugins": [
@@ -20,7 +20,13 @@
     }
   },
   "globals": {
-    "Promise": true
+    "Promise": true,
+    "Foreach": true,
+    "ShowIF": true,
+    "HideIF": true,
+    "Switch": true,
+    "SwitchCase": true,
+    "SwitchDefault": true
   },
   "settings": {
     "flowtype": {

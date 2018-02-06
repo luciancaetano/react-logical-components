@@ -1,14 +1,17 @@
 import React from 'react';
 import { Foreach, ForeachEmpty } from '../src/index';
 import { withKnobs, object, array } from '@storybook/addon-knobs/react';
-import { storiesOf } from '@storybook/react';
+import { storiesOf, setAddon } from '@storybook/react';
+import JSXAddon from 'storybook-addon-jsx';
+
+setAddon(JSXAddon);
 
 let arrayTodoList:Array<any> = ['Buy Lettuce', 'Buy Potato', 'Buy Onions'];
 let ObjectTodoList:Array<any> = { a: 'Buy Lettuce', b: 'Buy Potato', c: 'Buy Onions' };
 let stories = storiesOf('Foreach', module);
 stories.addDecorator(withKnobs);
 
-stories.add('Iterate Array', () => (
+stories.addWithJSX('Iterate Array', () => (
     <ul>
         <Foreach itens={array('Array List', arrayTodoList)}>
             {(item: any, index: any): React.ReactNode => {
@@ -17,7 +20,7 @@ stories.add('Iterate Array', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Object', () => (
+stories.addWithJSX('Iterate Object', () => (
     <ul>
         <Foreach itens={object('Object List', ObjectTodoList)}>
             {(item: any, index: any, key: string): React.ReactNode => {
@@ -26,7 +29,7 @@ stories.add('Iterate Object', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Empty Array', () => (
+stories.addWithJSX('Iterate Empty Array', () => (
     <ul>
         <Foreach itens={array('Array List', [])}>
             {(item: any, index: any): React.ReactNode => {
@@ -35,7 +38,7 @@ stories.add('Iterate Empty Array', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Empty Object', () => (
+stories.addWithJSX('Iterate Empty Object', () => (
     <ul>
         <Foreach itens={object('Object List', [])}>
             {(item: any, index: any): React.ReactNode => {
@@ -44,7 +47,7 @@ stories.add('Iterate Empty Object', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Array With ForeachEmpty', () => (
+stories.addWithJSX('Iterate Array With ForeachEmpty', () => (
     <ul>
         <Foreach itens={array('Array List', arrayTodoList)}>
             {(item: any, index: any): React.ReactNode => {
@@ -54,7 +57,7 @@ stories.add('Iterate Array With ForeachEmpty', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Object With ForeachEmpty', () => (
+stories.addWithJSX('Iterate Object With ForeachEmpty', () => (
     <ul>
         <Foreach itens={object('Object List', ObjectTodoList)}>
             {(item: any, index: any, key: string): React.ReactNode => {
@@ -64,7 +67,7 @@ stories.add('Iterate Object With ForeachEmpty', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Empty Array With ForeachEmpty', () => (
+stories.addWithJSX('Iterate Empty Array With ForeachEmpty', () => (
     <ul>
         <Foreach itens={array('Array List', [])}>
             {(item: any, index: any): React.ReactNode => {
@@ -74,7 +77,7 @@ stories.add('Iterate Empty Array With ForeachEmpty', () => (
         </Foreach>
     </ul>
 ));
-stories.add('Iterate Empty Object With ForeachEmpty', () => (
+stories.addWithJSX('Iterate Empty Object With ForeachEmpty', () => (
     <ul>
         <Foreach itens={object('Object List', ObjectTodoList)}>
             {(item: any, index: any): React.ReactNode => {

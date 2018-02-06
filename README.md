@@ -1,3 +1,4 @@
+
 # React <Logical.Components/>
 React <Logical.Components/> is a library of components designed to improve the visual quality and ease of applying logic operations, iterations etc. in React JSx.
 
@@ -59,7 +60,31 @@ Use `<ForeachEmpty/>` to render a default content when collection is empty.
         <ForeachEmpty> Nothing found </ForeachEmpty>
     </Foreach>
 ```
+## globalRegister
+If you are tired of importing these components every time you use them, to solve this bother we have the globalRegister function, see its use.
 
+In your index.js of your project.
+```jsx
+import {globalRegister} from 'react-logical-components'
+globalRegister ();
+```
+
+Or you can tell which components will not be registered.
+```jsx
+globalRegister ({foreach: false});
+```
+The following properties are accepted in the parameter.
+```jsx
+interface IGlobalRegisterOptions {
+     foreach: boolean;
+     foreachEmpty: boolean;
+     hideIF: boolean;
+     showIF: boolean;
+     switch: boolean;
+     switchCase: boolean;
+     switchDefault: boolean;
+}
+```
 ## More coming 😎
 I started this project on January 24, 2018, so I am working to implement and test these components, I am also working on new concepts of components, ah also I accept ideas.
 
