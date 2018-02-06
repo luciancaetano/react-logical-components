@@ -1,6 +1,6 @@
 {
   "name": "react-logical-components",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib --presets=env,flow --plugins=transform-class-properties,transform-object-rest-spread",
@@ -32,5 +32,9 @@
   },
   "dependencies": {
     "react": "^16.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luciancaetano/react-logical-components.git"
   }
 }
