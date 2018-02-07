@@ -8,7 +8,7 @@ interface IForeachProps{
 /**
  * This component expose default ReactNodes to Foreach component
  */
-export class ForeachEmpty extends React.Component<IForeachProps> {
+export class EmptyCollection extends React.Component<any> {
     render (): ReactNode {
         return Children.map(this.props.children,
             (child: ReactChild, index: number) =>
@@ -19,7 +19,7 @@ export class ForeachEmpty extends React.Component<IForeachProps> {
  * This component makes an interaction on a vector or an object using Object.keys,
  * see an example usage. Use <ForeachEmpty> to render a default content when collection is empty.
  */
-export class Foreach extends React.Component<IForeachProps> {
+export class Each extends React.Component<IForeachProps> {
     static propTypes = {
         itens: PropTypes.oneOfType([PropTypes.array, PropTypes.object])
     }
@@ -27,14 +27,14 @@ export class Foreach extends React.Component<IForeachProps> {
         itens: []
     }
     render (): ReactNode {
-        // Find ForeachEmpty
+        // Find EmptyCollection
         let ForeachEmptyChildren = null;
         let renderCallback = null;
         if (this.props.children.forEach === undefined) {
             renderCallback = this.props.children;
         } else {
             this.props.children.forEach((child: ReactChild, index: number) => {
-                if (child.type === ForeachEmpty) {
+                if (child.type === EmptyCollection) {
                     ForeachEmptyChildren = child;
                 } else if (child instanceof Function || typeof child === 'function') {
                     renderCallback = child;

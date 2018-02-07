@@ -1,10 +1,10 @@
-import { Foreach, ForeachEmpty } from './foreach';
-import { HideIF, ShowIF } from './showif-hideif';
+import { Each, EmptyCollection } from './foreach';
+import { HideIf, ShowIf } from './showif-hideif';
 import { Switch, SwitchCase, SwitchDefault } from './switch';
 
 interface IGlobalRegisterOptions{
-    foreach: boolean;
-    foreachEmpty: boolean;
+    each: boolean;
+    emptyCollection: boolean;
     hideIF: boolean;
     showIF: boolean;
     switch: boolean;
@@ -17,25 +17,26 @@ interface IGlobalRegisterOptions{
  * @param {IGlobalRegisterOptions} options
  */
 export const globalRegister = (options: IGlobalRegisterOptions = {
-    foreach: true,
-    foreachEmpty: true,
-    hideIF: true,
-    showIF: true,
+    each: true,
+    emptyCollection: true,
+    hideIf: true,
+    showIf: true,
     switch: true,
     switchCase: true,
     switchDefault: true
 }) => {
-    if (options.foreach) {
-        global.Foreach = Foreach;
+    global.reactLogicalComponentesGlobalRegistered = options;
+    if (options.each) {
+        global.Each = Each;
     }
-    if (options.foreachEmpty) {
-        global.ForeachEmpty = ForeachEmpty;
+    if (options.emptyCollection) {
+        global.EmptyCollection = EmptyCollection;
     }
-    if (options.hideIF) {
-        global.HideIF = HideIF;
+    if (options.hideIf) {
+        global.HideIf = HideIf;
     }
-    if (options.showIF) {
-        global.ShowIF = ShowIF;
+    if (options.showIf) {
+        global.ShowIf = ShowIf;
     }
     if (options.switch) {
         global.Switch = Switch;

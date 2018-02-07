@@ -4,10 +4,10 @@ declare module "react-logical-components"{
         declare interface IfProps{
             value: boolean;
         }
-        declare class ShowIF extends React.Component<IfProps>{};
-        declare class HideIF extends React.Component<IfProps>{};
+        declare class ShowIf extends React.Component<IfProps>{};
+        declare class HideIf extends React.Component<IfProps>{};
         declare interface IForeachProps{
-            itens: Array | Object;
+            itens: Array<any> | Object;
         }
         declare class ForeachEmpty extends React.Component<any>{};
         declare class Foreach extends React.Component<IForeachProps>{};

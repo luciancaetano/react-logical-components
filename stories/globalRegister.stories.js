@@ -8,30 +8,32 @@ setAddon(JSXAddon);
 
 globalRegister();
 
+console.log(global.ShowIf);
+
 let arrayTodoList:Array<any> = ['Buy Lettuce', 'Buy Potato', 'Buy Onions'];
 let stories = storiesOf('globalRegister', module);
 stories.addDecorator(withKnobs);
 
-stories.addWithJSX('Foreach', () => (
+stories.addWithJSX('Each', () => (
     <ul>
-        <Foreach itens={array('Array List', arrayTodoList)}>
+        <Each itens={array('Array List', arrayTodoList)}>
             {(item: any, index: any): React.ReactNode => {
                 return <li key={index}>{item}</li>;
             }}
-        </Foreach>
+        </Each>
     </ul>
 ), { showFunctions: true });
 
 stories.addWithJSX('ShowIf', () => (
-    <ShowIF value={boolean('Bool Value', true)}>
+    <ShowIf value={boolean('Bool Value', true)}>
         <button>Hello World</button>
-    </ShowIF>
+    </ShowIf>
 ));
 
 stories.addWithJSX('HideIf', () => (
-    <HideIF value={boolean('Bool Value', true)}>
+    <HideIf value={boolean('Bool Value', true)}>
         <button>Hello World</button>
-    </HideIF>
+    </HideIf>
 ));
 
 stories.addWithJSX('Switch, SwitchCase and SwitchDefault', () => (

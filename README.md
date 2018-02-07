@@ -51,14 +51,14 @@ This component already implements the much-used switch, see an example usage
         </SwitchDefault>
     </Switch>
 ```
-## Foreach, ForeachEmpty 🤩
+## Each, EmptyCollection 🤩
 This component makes an interaction on a vector or an object using Object.keys, see an example usage.
-Use `<ForeachEmpty/>` to render a default content when collection is empty.
+Use `<EmptyCollection/>` to render a default content when collection is empty.
 ```jsx
-    <Foreach collection={[1, 2, 3]}>
+    <Each collection={[1, 2, 3]}>
         { (item, index) => <li key={index}>{item}</li>}
-        <ForeachEmpty> Nothing found </ForeachEmpty>
-    </Foreach>
+        <EmptyCollection> Nothing found </EmptyCollection>
+    </Each>
 ```
 ## globalRegister
 If you are tired of importing these components every time you use them, to solve this bother we have the globalRegister function, see its use.
