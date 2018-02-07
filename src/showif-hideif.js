@@ -7,7 +7,7 @@ interface IfProps{
 /**
  * This component will only render children elements if the value attribute is true
  */
-export class ShowIF extends React.Component<IfProps> {
+export class ShowIf extends React.Component<IfProps> {
     static propTypes = {
         value: PropTypes.bool.isRequired
     }
@@ -24,7 +24,7 @@ export class ShowIF extends React.Component<IfProps> {
 /**
  * This component will not render children elements if the value attribute is true
  */
-export class HideIF extends React.Component<IfProps> {
+export class HideIf extends React.Component<IfProps> {
     static propTypes = {
         value: PropTypes.bool.isRequired
     }
