@@ -22,13 +22,13 @@ stories.addWithJSX('Foreach', () => (
     </ul>
 ), { showFunctions: true });
 
-stories.addWithJSX('ShowIF', () => (
+stories.addWithJSX('ShowIf', () => (
     <ShowIF value={boolean('Bool Value', true)}>
         <button>Hello World</button>
     </ShowIF>
 ));
 
-stories.addWithJSX('HideIF', () => (
+stories.addWithJSX('HideIf', () => (
     <HideIF value={boolean('Bool Value', true)}>
         <button>Hello World</button>
     </HideIF>
