@@ -1,6 +1,6 @@
 
 # React <Logical.Components/>
-[Use Gitter for tips and more](https://gitter.im/react-logical-components/Lobby
+[Use Gitter for tips and more](https://gitter.im/react-logical-components/Lobby)
 React <Logical.Components/> is a library of components designed to improve the visual quality and ease of applying logic operations, iterations etc. in React JSx.
 
 The way we currently use the if condition for an element
