@@ -86,7 +86,5 @@ interface IGlobalRegisterOptions {
      switchDefault: boolean;
 }
 ```
-## More coming 😎
-I started this project on January 24, 2018, so I am working to implement and test these components, I am also working on new concepts of components, ah also I accept ideas.
 
 Thanks for being interested in my little project: D
